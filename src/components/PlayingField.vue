@@ -157,6 +157,8 @@ export default {
                 rowSum += 1000
             }else if(newState.rowSum[i]==21 && oldState.rowSum[i]==20){
                 rowSum += 100
+            }else if(newState.rowSum[i]==11 && oldState.rowSum[i]==10){
+                rowSum += 1
             }else {
                 rowSum += rowDelta[i]
             }
@@ -165,6 +167,8 @@ export default {
                 colSum += 1000
             }else if(newState.colSum[i]==21 && oldState.colSum[i]==20){
                 colSum += 100
+            }else if(newState.colSum[i]==11 && oldState.colSum[i]==10){
+                colSum += 1    
             }else {
                 colSum += colDelta[i]
             }
@@ -176,6 +180,8 @@ export default {
                     diaSum += 1000
                 }else if(newState.diaSum[i]==21 && oldState.diaSum[i]==20){
                     diaSum += 100
+                }else if(newState.colSum[i]==11 && oldState.colSum[i]==10){
+                    colSum += 1
                 }else {
                     diaSum += diaDelta[i]
                 }
